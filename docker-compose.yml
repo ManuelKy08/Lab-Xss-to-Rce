@@ -1,0 +1,16 @@
+services:
+  security-lab:
+    image: php:8.2-apache
+    container_name: security-lab
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public:/var/www/html
+    environment:
+      - APACHE_DOCUMENT_ROOT=/var/www/html
+    working_dir: /var/www/html
+    command: >
+      bash -c "docker-php-ext-install pdo_sqlite &&
+               a2enmod rewrite && 
+               apache2-foreground"
+    restart: unless-stopped

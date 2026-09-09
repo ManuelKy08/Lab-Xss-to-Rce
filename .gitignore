@@ -1,0 +1,18 @@
+# Database
+database/*.db
+
+# Logs
+logs/
+
+# Uploaded files (jangan di-commit ke repo)
+public/uploads/*
+
+# Keep the uploads folder structure
+!public/uploads/.gitkeep
+
+# OS & Editor
+Thumbs.db
+.DS_Store
+*.swp
+.idea/
+.vscode/
